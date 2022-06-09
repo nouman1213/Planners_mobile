@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "332922047317",
+    "project_id": "planners-4500b",
+    "storage_bucket": "planners-4500b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332922047317:android:8c584081e030cbafbcbddc",
+        "android_client_info": {
+          "package_name": "com.sj.planners"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332922047317-m9rkd66rkhf482tstg1m79sulpppjito.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sj.planners",
+            "certificate_hash": "d13fd30366f893ad6dc3e20a9cefc9ba27c24291"
+          }
+        },
+        {
+          "client_id": "332922047317-tm34jtj0446s5kd2h4g4aar7p7gpa8ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_YJ6PxRC7FTNnCdXtiJ0vFwCsLLsXC-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332922047317-tm34jtj0446s5kd2h4g4aar7p7gpa8ob.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "332922047317-19onf5b3pbch2jbb54o3bthdh2sdrhh5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.plannersPlan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
