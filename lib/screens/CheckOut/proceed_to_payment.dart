@@ -131,7 +131,7 @@ class _ProceedToPayScreenState extends State<ProceedToPayScreen> {
                 decoration: BoxDecoration(
                     color: kPrimaryWhite,
                     borderRadius: BorderRadius.circular(10)),
-                height: 12.h,
+                height: 14.h,
                 child: Padding(
                   padding:
                       EdgeInsets.symmetric(vertical: 2.h, horizontal: 16.w),
@@ -199,7 +199,7 @@ class _ProceedToPayScreenState extends State<ProceedToPayScreen> {
                 decoration: BoxDecoration(
                     color: kPrimaryWhite,
                     borderRadius: BorderRadius.circular(10)),
-                height: 39.h,
+                height: 42.h,
                 child: Padding(
                   padding:
                       EdgeInsets.symmetric(vertical: 2.h, horizontal: 16.w),

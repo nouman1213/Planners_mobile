@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(height: 35.h, child: const CSlider()),
+                Container(height: 42.h, child: const CSlider()),
                 Container(
                   color: Colors.white,
                   height: 38.h,

@@ -52,77 +52,80 @@ class PaymentStatus extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(1.h),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(height: 15.h),
-                  Center(child: Image.asset(successLogo)),
-                  SizedBox(height: 5.h),
-                  Text(
-                    "Payment Success",
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      color: kPrimaryBlack5,
-                      fontFamily: 'museo',
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 15.h),
+                    Center(child: Image.asset(successLogo)),
+                    SizedBox(height: 5.h),
+                    Text(
+                      "Payment Success",
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: kPrimaryBlack5,
+                        fontFamily: 'museo',
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 5.h),
-                  Text(
-                    "When an unknown printer took a galley of type and scrambled it to make a type specimen book, it has survived not only five centuries,",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      color: kPrimaryBlack5,
-                      fontFamily: 'museo',
+                    SizedBox(height: 5.h),
+                    Text(
+                      "When an unknown printer took a galley of type and scrambled it to make a type specimen book, it has survived not only five centuries,",
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: kPrimaryBlack5,
+                        fontFamily: 'museo',
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 15.h),
-                  InkWell(
-                    onTap: () async {
-                      appPro.setLoadingTrue();
-                      var result = await CartRepo().checkOut();
-                      if (result != null) {
-                        appPro.setLoadingFalse();
-                        if (result['status']) {
-                          showSnackBar(
-                            "Success",
-                            result['message'],
-                          );
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => BottomNavigationBarScreen()));
+                    SizedBox(height: 15.h),
+                    InkWell(
+                      onTap: () async {
+                        appPro.setLoadingTrue();
+                        var result = await CartRepo().checkOut();
+                        if (result != null) {
+                          appPro.setLoadingFalse();
+                          if (result['status']) {
+                            showSnackBar(
+                              "Success",
+                              result['message'],
+                            );
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) =>
+                                        BottomNavigationBarScreen()));
+                          } else {
+                            showSnackBar(
+                              "Error",
+                              result['message'],
+                            );
+                          }
                         } else {
                           showSnackBar(
                             "Error",
-                            result['message'],
+                            'Something went wrong please try again later.',
                           );
                         }
-                      } else {
-                        showSnackBar(
-                          "Error",
-                          'Something went wrong please try again later.',
-                        );
-                      }
-                    },
-                    child: Container(
-                      height: 7.h,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: kPrimaryblue,
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Center(
-                        child: Text(
-                          'Finish',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'museo',
-                              fontSize: 10.sp),
+                      },
+                      child: Container(
+                        height: 7.h,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: kPrimaryblue,
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Center(
+                          child: Text(
+                            'Finish',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'museo',
+                                fontSize: 10.sp),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             appPro.isLoading

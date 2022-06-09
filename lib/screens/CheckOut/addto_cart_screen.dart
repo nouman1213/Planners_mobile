@@ -265,7 +265,7 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
                             })),
                     SizedBox(height: 2.h),
                     Container(
-                      height: 15.h,
+                      height: 19.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: kPrimaryWhite,

@@ -252,7 +252,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   SizedBox(height: 2.h),
                   Container(
-                    height: 17.h,
+                    height: 19.h,
                     width: double.infinity,
                     color: kPrimaryWhite,
                     child: Padding(

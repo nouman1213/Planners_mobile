@@ -82,7 +82,7 @@ class _SubCategoryServicDetailScreenState
             //     ? SizedBox()
             //     :
             SizedBox(
-                height: 40.h,
+                height: 48.h,
                 child: CSlider(
                   appBarIcon:
                       widget.subCategoriesServiceDetail.category!.iconImage!,
